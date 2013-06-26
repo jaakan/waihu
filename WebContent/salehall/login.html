@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 禁止缓存 -->
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+<title>营业厅登陆</title>
+<link rel="stylesheet" type="text/css" 
+  href="../public/js/jquery-plugin/jquery-easyui-1.2.3/themes/gray/easyui.css"  />
+  
+<style type="text/css">
+#banner{
+height:150px;
+}
+#middle{
+text-align:center;
+margin:0px auto;
+}
+#login form div{
+padding:2px;
+}
+
+</style>
+
+<script type="text/javascript" 
+  src="../public/js/jquery/jquery1-7-2.js"></script>
+<script type="text/javascript" 
+  src="../public/js/jquery-plugin/jquery-easyui-1.2.3/jquery.easyui.min.js"></script>
+<script type="text/javascript" 
+  src="../public/js/jquery-plugin/jquery-json/jquery.json.js"></script>
+  
+<script type="text/javascript">
+$(document).ready(init);
+
+var username;
+var password;
+function init(){
+	$.post("login.jsp",{"req":"getSalehallData"},function(data,status){
+		initForm(data,status);
+	});
+	
+	$("#login input[name='submit']").click(onSubmit);
+}
+
+function initForm(data,status){
+	var res=eval("("+data+")").salehalls;
+	var $subcenter=$("#login select[name='subcenter']");
+	var $salehallname=$("#login select[name='name']");
+	var subcenters=[{subcenter:"1"},{subcenter:"2"},{subcenter:"3"},{subcenter:"4"},{subcenter:"5"},{subcenter:"6"}];
+	$subcenter.combobox({
+		textField:"subcenter",
+		valueField:"subcenter",
+		onSelect:function(option){
+			var salehalls=new Array();
+			for(var i=0;i<res.length;i++){
+				if(res[i].subcenter==option.subcenter){
+					salehalls.push(res[i]);
+				}
+			}
+			$salehallname.combobox("clear");
+			$salehallname.combobox("loadData",salehalls);
+		}
+	});
+	
+	$salehallname.combobox({
+		valueField:"name",
+		textField:"name",
+		onSelect:function(option){
+			username=option.name;
+		}
+	});
+	
+	$subcenter.combobox("loadData",subcenters);
+	
+}
+
+function onSubmit(){
+     password=$("#login input[name='password']").val();
+     $.post("login.jsp",{"req":"check","username":username,"password":password},function(data,status){
+    	 var loginStatus=eval("("+data+")").status;
+    	 if(loginStatus=="success"){
+    		 $("#status").html("登陆成功！<a href='index.html'>点击此处跳转</a>");
+    	 }else{
+    		 $("#status").html("登陆失败！");
+    	 }
+    	 
+     });
+}
+</script>
+</head>
+<body>
+<div id="banner"></div>
+
+<div id="middle">
+<div id="login">
+<form tag="login" method="post">
+
+<div>
+<label  for="subcenter" >选择分中心</label>
+<select  name="subcenter"  width="200"></select>
+</div>
+
+<div>
+<label for="name">选择营业厅</label>
+<select name="name" width="200"></select>
+</div>
+
+<div>
+<label for="password">输入密码</label>
+<input type="password" name="password"></input>
+</div>
+
+<div>
+<input type="button" name="submit" value="登录"></input>
+</div>
+
+</form>
+
+</div><!-- login end -->
+<div id="status"></div>
+</div><!-- middle end -->
+
+<div id="foot"></div>
+</body>
+</html>

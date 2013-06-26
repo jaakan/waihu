@@ -1,0 +1,40 @@
+
+/*表格样式。*/
+table {
+    width:100%;
+    padding: 0px;
+    margin: 0px;
+    font-family:Arial, Tahoma, Verdana, Sans-Serif,宋体;
+	border-left:1px solid #ADD8E6;
+	border-collapse:collapse;
+}
+
+/*表头样式。*/
+table th {
+    font-size:12px;
+    font-weight:600;
+    color: #303030;
+    border-right: 1px solid #ADD8E6;
+    border-bottom: 1px solid #ADD8E6;
+    border-top: 1px solid #ADD8E6;
+    letter-spacing: 2px;
+    text-align: left;
+    padding: 10px 0px 10px 0px;
+    background: url(../images/tablehdbg.png);
+    white-space:nowrap;
+    text-align:center;
+    overflow: hidden;
+}
+
+/*单元格样式。*/
+table td {
+    border-right: 1px solid #ADD8E6;
+    border-bottom: 1px solid #ADD8E6;
+    background: #fff;
+    font-size:12px;
+    padding: 3px 3px 3px 6px;
+    color: #303030;
+    word-break:break-all;
+    word-wrap:break-word;
+    white-space:normal;
+}

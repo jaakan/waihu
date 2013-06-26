@@ -1,0 +1,1464 @@
+From: <ÓÉ Windows Internet Explorer 8 ±£´æ>
+Subject: Documentation - ocupload - One Click Upload - A jQuery Plugin - Google Project Hosting
+Date: Fri, 21 Dec 2012 22:44:23 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CDDFCC.B92DA070"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.6157
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CDDFCC.B92DA070
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://code.google.com/p/ocupload/wiki/Documentation
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Documentation - ocupload - One Click Upload - A =
+jQuery Plugin - Google Project Hosting</TITLE>
+<META content=3D"text/html; charset=3DUTF-8" http-equiv=3DContent-Type>
+<META content=3DIE=3Dedge,chrome=3D1 http-equiv=3DX-UA-Compatible>
+<META name=3DROBOTS content=3DNOARCHIVE><LINK rel=3Dicon =
+type=3Dimage/vnd.microsoft.icon=20
+href=3D"http://www.gstatic.com/codesite/ph/images/phosting.ico"><LINK=20
+rel=3Dcanonical =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation">
+<SCRIPT type=3Dtext/javascript>=0A=
+ =0A=
+ (function(){var =
+a=3Dfunction(b){this.t=3D{};this.tick=3Dfunction(b,c,d){c=3Dvoid =
+0!=3Dd?d:(new =
+Date).getTime();this.t[b]=3Dc};this.tick("start",null,b)},e=3Dnew =
+a;window.jstiming=3D{Timer:a,load:e};try{var =
+f=3Dnull;window.chrome&&window.chrome.csi&&(f=3DMath.floor(window.chrome.=
+csi().pageT));null=3D=3Df&&window.gtbExternal&&(f=3Dwindow.gtbExternal.pa=
+geT());null=3D=3Df&&window.external&&(f=3Dwindow.external.pageT);f&&(wind=
+ow.jstiming.pt=3Df)}catch(g){};})();=0A=
+=0A=
+ =0A=
+ =0A=
+ =0A=
+ =0A=
+ var codesite_token =3D null;=0A=
+ =0A=
+ =0A=
+ var CS_env =3D =
+{"assetHostPath":"http://www.gstatic.com/codesite/ph","domainName":null,"=
+loggedInUserEmail":null,"projectName":"ocupload","relativeBaseUrl":"","pr=
+ofileUrl":null,"token":null,"projectHomeUrl":"/p/ocupload","assetVersionP=
+ath":"http://www.gstatic.com/codesite/ph/16229512607128645344"};=0A=
+ var _gaq =3D _gaq || [];=0A=
+ _gaq.push(=0A=
+ ['siteTracker._setAccount', 'UA-18071-1'],=0A=
+ ['siteTracker._trackPageview']);=0A=
+ =0A=
+ _gaq.push(=0A=
+ ['projectTracker._setAccount', 'UA-2560805-19'],=0A=
+ ['projectTracker._trackPageview']);=0A=
+ =0A=
+ (function() {=0A=
+ var ga =3D document.createElement('script'); ga.type =3D =
+'text/javascript'; ga.async =3D true;=0A=
+ ga.src =3D ('https:' =3D=3D document.location.protocol ? 'https://ssl' =
+: 'http://www') + '.google-analytics.com/ga.js';=0A=
+ (document.getElementsByTagName('head')[0] || =
+document.getElementsByTagName('body')[0]).appendChild(ga);=0A=
+ })();=0A=
+ =0A=
+ </SCRIPT>
+<LINK rel=3Dstylesheet type=3Dtext/css=20
+href=3D"http://www.gstatic.com/codesite/ph/16229512607128645344/css/core.=
+css"><LINK=20
+rel=3Dstylesheet type=3Dtext/css=20
+href=3D"http://www.gstatic.com/codesite/ph/16229512607128645344/css/ph_de=
+tail.css"><LINK=20
+rel=3Dalternate type=3Dapplication/atom+xml=20
+href=3D"/feeds/p/ocupload/svnchanges/basic?path=3D/wiki/Documentation.wik=
+i"><!--[if IE]><LINK=20
+rel=3Dstylesheet type=3Dtext/css=20
+href=3D"http://www.gstatic.com/codesite/ph/16229512607128645344/css/d_ie.=
+css"><![endif]-->
+<STYLE type=3Dtext/css>.off.menuIcon {
+	BACKGROUND: =
+url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) =
+no-repeat 0px -42px
+}
+.on.menuIcon {
+	BACKGROUND: =
+url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) =
+no-repeat 0px -28px
+}
+.down.menuIcon {
+	BACKGROUND: =
+url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) =
+no-repeat 0px 0px
+}
+#maincol {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+</STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.23345"></HEAD>
+<BODY class=3Dt6>
+<SCRIPT type=3Dtext/javascript>=0A=
+ window.___gcfg =3D {lang: 'en'};=0A=
+ (function() =0A=
+ {var po =3D document.createElement("script");=0A=
+ po.type =3D "text/javascript"; po.async =3D true;po.src =3D =
+"https://apis.google.com/js/plusone.js";=0A=
+ var s =3D document.getElementsByTagName("script")[0];=0A=
+ s.parentNode.insertBefore(po, s);=0A=
+ })();=0A=
+</SCRIPT>
+
+<DIV class=3Dheadbg>
+<DIV id=3Dgaia><SPAN><A id=3Dprojects-dropdown onclick=3D"return false;" =
+
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#"><U>My =
+favorites</U>=20
+<SMALL>=E2=96=BC</SMALL></A> | <A =
+onclick=3D"_CS_click('/gb/ph/signin');"=20
+href=3D"https://www.google.com/accounts/ServiceLogin?service=3Dcode&amp;l=
+tmpl=3Dphosting&amp;continue=3Dhttp%3A%2F%2Fcode.google.com%2Fp%2Focuploa=
+d%2Fwiki%2FDocumentation&amp;followup=3Dhttp%3A%2F%2Fcode.google.com%2Fp%=
+2Focupload%2Fwiki%2FDocumentation"><U>Sign=20
+in</U></A> </SPAN></DIV>
+<DIV style=3D"LEFT: 0pt" class=3Dgbh></DIV>
+<DIV style=3D"RIGHT: 0pt" class=3Dgbh></DIV>
+<DIV style=3D"HEIGHT: 1px"></DIV><!--[if lte IE 7]>=0A=
+<div style=3D"text-align:center;">=0A=
+Your version of Internet Explorer is not supported. Try a browser that=0A=
+contributes to open source, such as <a =
+href=3D"http://www.firefox.com">Firefox</a>,=0A=
+<a href=3D"http://www.google.com/chrome">Google Chrome</a>, or=0A=
+<a href=3D"http://code.google.com/chrome/chromeframe/">Google Chrome =
+Frame</a>.=0A=
+</div>=0A=
+<![endif]-->
+<TABLE=20
+style=3D"PADDING-BOTTOM: 0px; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; =
+WIDTH: 100%; PADDING-RIGHT: 0px; PADDING-TOP: 0px"=20
+cellSpacing=3D0 cellPadding=3D0 =
+itemtype=3D"http://schema.org/CreativeWork"=20
+  itemscope><TBODY>
+  <TR style=3D"HEIGHT: 58px">
+    <TD id=3Dplogo><LINK href=3D"/p/ocupload" itemprop=3D"url"><A=20
+      href=3D"http://code.google.com/p/ocupload/"><IMG alt=3DLogo=20
+      src=3D"http://www.gstatic.com/codesite/ph/images/defaultlogo.png"=20
+      itemprop=3D"image"> </A></TD>
+    <TD style=3D"PADDING-LEFT: 0.5em">
+      <DIV id=3Dpname><A =
+href=3D"http://code.google.com/p/ocupload/"><SPAN=20
+      itemprop=3D"name">ocupload</SPAN></A> </DIV>
+      <DIV id=3Dpsum><A id=3Dproject_summary_link=20
+      href=3D"http://code.google.com/p/ocupload/"><SPAN =
+itemprop=3D"description">One=20
+      Click Upload - A jQuery Plugin</SPAN></A> </DIV></TD>
+    <TD=20
+      style=3D"TEXT-ALIGN: right; WHITE-SPACE: nowrap; VERTICAL-ALIGN: =
+bottom"><FORM=20
+      action=3D/hosting/search><INPUT size=3D30 type=3Dtext name=3Dq> =
+<INPUT value=3D"Search projects" type=3Dsubmit name=3Dprojectsearch>=20
+  </FORM></TD></TR></TBODY></TABLE></DIV>
+<DIV id=3Dmt class=3Dgtb><A class=3D"tab "=20
+href=3D"http://code.google.com/p/ocupload/">Project&nbsp;Home</A> <A =
+class=3D"tab "=20
+href=3D"http://code.google.com/p/ocupload/downloads/list">Downloads</A> =
+<A=20
+class=3D"tab active" =
+href=3D"http://code.google.com/p/ocupload/w/list">Wiki</A> <A=20
+class=3D"tab " =
+href=3D"http://code.google.com/p/ocupload/issues/list">Issues</A> <A=20
+class=3D"tab " =
+href=3D"http://code.google.com/p/ocupload/source/checkout">Source</A>=20
+
+<DIV class=3Dgtbc></DIV></DIV>
+<TABLE class=3Dst border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%"=20
+  align=3Dcenter><TBODY>
+  <TR>
+    <TD class=3Dsubt>
+      <DIV class=3DissueDetail>
+      <DIV class=3Disf><SPAN class=3DinIssueList><SPAN>Search</SPAN>=20
+      <FORM style=3D"DISPLAY: inline" method=3Dget =
+action=3D/p/ocupload/w/list><SELECT=20
+      id=3Dcan name=3Dcan> <OPTION disabled>Search within:</OPTION> =
+<OPTION=20
+        value=3D1>&nbsp;All wiki pages</OPTION> <OPTION =
+value=3D3>&nbsp;Featured=20
+        pages</OPTION> <OPTION selected value=3D2>&nbsp;Current =
+pages</OPTION>=20
+        <OPTION value=3D4>&nbsp;Deprecated pages</OPTION></SELECT> =
+<SPAN>for</SPAN>=20
+      <SPAN id=3Dqq><INPUT id=3Dsearchq size=3D38 type=3Dtext name=3Dq=20
+      autocomplete=3D"off"></SPAN> <INPUT value=3DSearch type=3Dsubmit>=20
+      </FORM></SPAN></DIV></DIV></TD>
+    <TD class=3Dbevel-right vAlign=3Dtop =
+align=3Dright></TD></TR></TBODY></TABLE>
+<SCRIPT type=3Dtext/javascript>=0A=
+ var cancelBubble =3D false;=0A=
+ function _go(url) { document.location =3D url; }=0A=
+</SCRIPT>
+
+<DIV id=3Dmaincol>
+<STYLE type=3Dtext/css>.delcom {
+	BACKGROUND: #e8e8e8
+}
+.commentcontent {
+	PADDING-BOTTOM: 0px; MARGIN: 2em; PADDING-LEFT: 10px; WIDTH: 66em; =
+PADDING-RIGHT: 10px; PADDING-TOP: 0px
+}
+.artifactcomment {
+	BORDER-TOP: #c3d9ff 3px solid
+}
+#commentform {
+	BORDER-TOP: #c3d9ff 3px solid
+}
+</STYLE>
+
+<DIV id=3Dwikipage>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD style=3D"PADDING-LEFT: 5px; VERTICAL-ALIGN: top">
+      <DIV id=3Dwikiheader><SPAN=20
+      style=3D"FONT-SIZE: 120%; FONT-WEIGHT: bold">Documentation</SPAN> =
+&nbsp;=20
+      <DIV>
+      <DIV style=3D"FLOAT: right" id=3Dwikiauthor>Updated <SPAN=20
+      title=3D"Thu Feb  4 12:09:36 2010">Feb 4, 2010</SPAN> by <A =
+class=3Duserlink=20
+      =
+href=3D"http://code.google.com/u/115194301685692860787/">http://code.goog=
+le.com/u/115194301685692860787/</A>=20
+      </DIV></DIV></DIV>
+      <DIV id=3Dwikicontent>
+      <DIV id=3Dwikimaincol class=3Dvt>
+      <H1><A name=3DDocumentation></A>Documentation<A =
+class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Documentatio=
+n"></A></H1>
+      <P>This documentation covers the following.=20
+      <UL>
+        <LI>Basic Usage </LI>
+        <LI>Options </LI>
+        <LI>Functions </LI>
+        <LI>Callbacks </LI></UL>
+      <P></P>
+      <H2><A name=3DBasic_Usage></A>Basic Usage<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Basic_Usage"=
+></A></H2>
+      <P>As a jQuery chained function </P><PRE =
+class=3Dprettyprint>$(element).upload( /** options */ );</PRE>
+      <P>As a stand-alone jQuery function </P><PRE =
+class=3Dprettyprint>$.ocupload($(element), /** options */ );</PRE>
+      <H2><A name=3DOptions></A>Options<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Options"></A=
+></H2>
+      <P>Both of the functions accept an optional options object, which =
+can=20
+      contain any or all of the following (<I>default value</I>):=20
+      <UL>
+        <LI><STRONG>name:</STRONG> ("<I>file</I>") The name of the file =
+input=20
+        form element. </LI>
+        <LI><STRONG>enctype:</STRONG> ("<I>multipart/form-data</I>") The =
+enctype=20
+        attribute of the form, it is usually a good idea to leave this =
+as=20
+        default. </LI>
+        <LI><STRONG>action:</STRONG> (<I>null</I>) The form action =
+attribute,=20
+        the page that will do the processing on the server side. </LI>
+        <LI><STRONG>autoSubmit:</STRONG> (<I>true</I>) If true the form =
+will be=20
+        submitted after the user selects a file (after the file browser =
+closes).=20
+        </LI>
+        <LI><STRONG>params:</STRONG> (<I>{}</I>) Additional paramaters =
+to be=20
+        sent with the file, creates a hidden form element using the key =
+as the=20
+        name of the form and the value as the value. </LI>
+        <LI><STRONG>onSubmit:</STRONG> (<I>null</I>) The callback =
+function=20
+        called before submitting the form. </LI>
+        <LI><STRONG>onComplete:</STRONG> (<I>null</I>) The callback =
+function=20
+        called after the action page loads. </LI>
+        <LI><STRONG>onSelect:</STRONG> (<I>null</I>) The callback =
+function=20
+        called after the user has selected a file. </LI></UL>
+      <P></P>
+      <H4><A name=3DExample></A>Example<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Example"></A=
+></H4><PRE class=3Dprettyprint>var myUpload =3D $(element).upload({
+        name: 'file',
+        action: '',
+        enctype: 'multipart/form-data',
+        params: {},
+        autoSubmit: true,
+        onSubmit: function() {},
+        onComplete: function() {},
+        onSelect: function() {}
+});</PRE>
+      <H2><A name=3DFunctions></A>Functions<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Functions"><=
+/A></H2>
+      <H3><A name=3Dfilename></A>filename<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#filename"></=
+A></H3>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>string</I>=20
+            <STRONG>filename</STRONG> ( void )</TD></TR></TBODY></TABLE>
+      <P></P>
+      <P>This function returns the name of the currently selected file. =
+</P>
+      <H4><A name=3DExample></A>Example<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Example"></A=
+></H4><PRE class=3Dprettyprint>var myUpload =3D $(element).upload();
+alert(myUpload.filename());</PRE>
+      <H3><A name=3Dname></A>name<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#name"></A></=
+H3>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>string</I>=20
+            <STRONG>name</STRONG> ( void )</TD></TR>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>void</I>=20
+            <STRONG>name</STRONG> ( string )</TD></TR></TBODY></TABLE>
+      <P></P>
+      <P>This function is used to get and set the name of the file =
+input. </P>
+      <H4><A name=3DExample></A>Example<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Example"></A=
+></H4><PRE class=3Dprettyprint>//Setting name at creation
+var myUpload =3D $(element).upload({
+	name: 'myFile'
+});
+
+//Changes the file input name to "myNewFile"
+myUpload.name('myNewFile');
+
+//Alerts "myNewFile"
+alert(myUpload.name());</PRE>
+      <H3><A name=3Daction></A>action<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#action"></A>=
+</H3>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>string</I>=20
+            <STRONG>action</STRONG> ( void )</TD></TR>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>void</I>=20
+            <STRONG>action</STRONG> ( string )</TD></TR></TBODY></TABLE>
+      <P></P>
+      <P>This function is used to get and set the action of the form. =
+</P>
+      <H4><A name=3DExample></A>Example<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Example"></A=
+></H4><PRE class=3Dprettyprint>//Setting action at creation
+var myUpload =3D $(element).upload({
+	action: 'upload.php'
+});
+
+//Changes the form action to "path/to/dir/newUpload.php"
+myUpload.action('path/to/dir/newUpload.php');
+
+//Alerts "path/to/dir/newUpload.php"
+alert(myUpload.action());</PRE>
+      <H3><A name=3Denctype></A>enctype<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#enctype"></A=
+></H3>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>string</I>=20
+            <STRONG>enctype</STRONG> ( void )</TD></TR>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>void</I>=20
+            <STRONG>enctype</STRONG> ( string =
+)</TD></TR></TBODY></TABLE>
+      <P></P>
+      <P>This function is used to get and set the enctype of the form. =
+</P>
+      <H4><A name=3DExample></A>Example<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Example"></A=
+></H4><PRE class=3Dprettyprint>//Setting enctype at creation
+var myUpload =3D $(element).upload({
+	enctype: 'multipart/form-data'
+});
+
+//Changes the form enctype to "application/x-www-form-urlencoded"
+myUpload.enctype('application/x-www-form-urlencoded');
+
+//Alerts "text/plain"
+alert(myUpload.enctype());</PRE>
+      <H3><A name=3Dparams></A>params<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#params"></A>=
+</H3>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>object</I>=20
+            <STRONG>params</STRONG> ( void )</TD></TR>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>void</I>=20
+            <STRONG>params</STRONG> ( object )</TD></TR></TBODY></TABLE>
+      <P></P>
+      <P>This function is used to alter additional parameters. </P>
+      <H4><A name=3DExample></A>Example<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Example"></A=
+></H4><PRE class=3Dprettyprint>//Setting paramters at creation
+var myUpload =3D $(element).upload({
+	params: {name: 'My file', description: 'My file description'} =20
+});
+
+/**
+ * Settings paramaters during runtime
+ * 	name: "My file" is replaced with "My new file
+ * 	description: remains the same
+ * 	size: is added
+ */
+myUpload.params({
+	name: 'My new file', size: '1000kb'
+});</PRE>
+      <H3><A name=3Dset></A>set<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#set"></A></H=
+3>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>void</I>=20
+            <STRONG>set</STRONG> ( object )</TD></TR></TBODY></TABLE>
+      <P></P>
+      <P>This function is used to alter options after creation of the =
+object.=20
+      </P>
+      <H4><A name=3DExample></A>Example<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Example"></A=
+></H4><PRE class=3Dprettyprint>//Setting options at creation
+var myUpload =3D $(element).upload( /** options */ );
+
+//Setting options after creation
+myUpload.set({
+	name: 'file',
+	action: '',
+	enctype: 'multipart/form-data',
+	params: {},
+	autoSubmit: true,
+	onSubmit: function() {},
+	onComplete: function() {},
+	onSelect: function() {}
+});</PRE>
+      <H3><A name=3Dsubmit></A>submit<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#submit"></A>=
+</H3>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>void</I>=20
+            <STRONG>submit</STRONG> ( object )</TD></TR></TBODY></TABLE>
+      <P></P>
+      <P>This function is used to submit the form if=20
+      <I><STRONG>autoSubmit</STRONG></I> is turned off. </P>
+      <H4><A name=3DExample></A>Example<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Example"></A=
+></H4>
+      <P>Javascript </P><PRE class=3Dprettyprint>var myUpload =3D =
+$(element).upload( /** options */ );</PRE>
+      <P>HTML </P><PRE class=3Dprettyprint>&lt;input type=3D"button" =
+value=3D"submit" onclick=3D"myUpload.submit()" /&gt;</PRE>
+      <H2><A name=3DCallbacks></A>Callbacks<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Callbacks"><=
+/A></H2>
+      <H3><A name=3DonSubmit></A>onSubmit<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#onSubmit"></=
+A></H3>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>void</I>=20
+            <STRONG>onSubmit</STRONG> ( void )</TD></TR></TBODY></TABLE>
+      <P></P>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P>This is called before the form is submitted, this is where you =
+should=20
+      make last minute changes to the parameters etc... </P>
+      <H3><A name=3DonComplete></A>onComplete<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#onComplete">=
+</A></H3>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>void</I>=20
+            <STRONG>onComplete</STRONG> ( response =
+)</TD></TR></TBODY></TABLE>
+      <P></P>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P>This is called after the action page has loaded, the first =
+parameter=20
+      contains the html response from the action so you can use it like =
+an AJAX=20
+      response. <I><STRONG>onComplete</STRONG></I> does not mean the =
+file was=20
+      uploaded successfully, you should use the action script to supply =
+a=20
+      suitable response. </P>
+      <H3><A name=3DonSelect></A>onSelect<A class=3Dsection_anchor=20
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#onSelect"></=
+A></H3>
+      <P></P>
+      <TABLE class=3Dwikitable>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px =
+solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; =
+BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; PADDING-TOP: =
+5px"><I>void</I>=20
+            <STRONG>onSelect</STRONG> ( void )</TD></TR></TBODY></TABLE>
+      <P></P>
+      <H4><A name=3DDescription></A>Description<A class=3Dsection_anchor =
+
+      =
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Description"=
+></A></H4>
+      <P>This is called after the file browse window is closed or the =
+value of=20
+      the file input is changed. </P></DIV></DIV></TD>
+  <TR></TR></TBODY></TABLE></DIV>
+<DIV id=3Dwikicommentcol>
+<DIV class=3Dcollapse>
+<DIV id=3Dcommentlist>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/103421662545073560205/">http://code.goog=
+le.com/u/103421662545073560205/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat Sep  6 13:17:09 2008">Sep 6, =
+2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>how can get filename when onSelect is working ? =
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/115194301685692860787/">http://code.goog=
+le.com/u/115194301685692860787/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat Sep  6 14:03:49 2008">Sep 6, =
+2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>try... </P><PRE class=3Dprettyprint>var myUpload =3D =
+$(element).upload();
+myUpload.onSelect =3D function() {
+        alert(myUpload.filename());
+}</PRE></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/110117891248856623208/">http://code.goog=
+le.com/u/110117891248856623208/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Thu Sep 11 09:04:43 2008">Sep 11, =
+2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Write plagin which simply hides input file. And farther already I =
+would could=20
+to write, that is why however much a just the same variant does not suit =
+me.=20
+</P>
+<P>forgive me for my English. </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <SPAN=20
+class=3Duserlink>web4deve...@gmail.com</SPAN>, </SPAN><SPAN class=3Ddate =
+
+title=3D"Tue Sep 23 22:42:50 2008">Sep 23, 2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>How to know then downloadin complete sucsesfuly, If on complete - =
+does not=20
+mean the file was uploaded successfully </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <SPAN=20
+class=3Duserlink>web4deve...@gmail.com</SPAN>, </SPAN><SPAN class=3Ddate =
+
+title=3D"Wed Sep 24 00:52:47 2008">Sep 24, 2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Where downloading my file? Or it`s should made php script? Then... =
+What=20
+params it must to get me? </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/113133807587140745991/">http://code.goog=
+le.com/u/113133807587140745991/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Wed Oct  1 05:20:13 2008">Oct 1, =
+2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>super cool plugin! </P>
+<P>But: - How to programatically SET/GET the file to upload, not through =
+FILE=20
+BROWSE WINDOWS? </P>
+<P>- How to integrate validate callback or send a 'TEST' request to =
+VALIDATE,=20
+when not valid then STOP the upload? </P>
+<P>Thanks in Advanced! </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/112005956795258451480/">http://code.goog=
+le.com/u/112005956795258451480/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Wed Oct  1 07:57:51 2008">Oct 1, =
+2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Hello! Quite well, but... </P>
+<P>1. upload will probably failed when you try to send file to other =
+domain=20
+(example: from www.website.com to images.website.com). If i remember =
+well,=20
+browser will not allow to get iframe content. It should be done in other =
+way...=20
+</P>
+<P>2. not every browser allow to create multipart form in js </P>
+<P>Mail me, if you need some additional informations... Bye!=20
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <SPAN=20
+class=3Duserlink>priemski...@gmail.com</SPAN>, </SPAN><SPAN class=3Ddate =
+
+title=3D"Sun Oct 26 07:17:48 2008">Oct 26, 2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>how to add optional data to this post action ? </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/102864514476019907469/">http://code.goog=
+le.com/u/102864514476019907469/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Tue Oct 28 07:13:22 2008">Oct 28, =
+2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>for 1nc... </P>
+<P>You can add more data to that submit using the "params" key like: =
+</P>
+<P>... params : {id: 32, otherVar : 'a value'}, ... =
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/113673553056394903450/">http://code.goog=
+le.com/u/113673553056394903450/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Thu Nov 20 06:11:19 2008">Nov 20, =
+2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>=D0=93=D0=BE=D1=81=D0=BF=D0=BE=D0=B4=D0=B0, =
+=D0=BF=D0=BE=D0=B4=D1=81=D0=BE=D0=B1=D0=B8=D1=82=D0=B5 =
+=D0=BA=D1=82=D0=BE =D1=87=D0=B5=D0=BC =
+=D1=81=D0=BC=D0=BE=D0=B6=D0=B5=D1=82. =D0=9A=D0=B0=D0=BA =
+=D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=D1=8C =D0=B8=D0=BC=D1=8F =
+=D1=84=D0=B0=D0=B9=D0=BB=D0=B0, =
+=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B9=20
+=D0=B7=D0=B0=D0=B3=D1=80=D1=83=D0=B6=D0=B0=D0=B5=D1=82=D1=81=D1=8F =
+=D0=BD=D0=B0 =D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=80? =
+=D1=84=D1=83=D0=BD=D0=BA=D1=86=D0=B8=D1=8F filename =
+=D0=BD=D0=B5=D1=84=D0=B8=D0=B3=D0=B0 =D0=BD=D0=B5 =
+=D0=B2=D0=BE=D0=B7=D0=B2=D1=80=D0=B0=D1=89=D0=B0=D0=B5=D1=82!?=20
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/108003893873603615367/">http://code.goog=
+le.com/u/108003893873603615367/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Thu Nov 20 14:36:53 2008">Nov 20, =
+2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>for igor.korotkov basename($<I>FILES['file']['name']);=20
+</I></P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/115789039238243700613/">http://code.goog=
+le.com/u/115789039238243700613/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat Nov 22 20:25:19 2008">Nov 22, =
+2008</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>IE7 outline hide plz change down code and version up plz var input =
+=3D $(=20
+<BLOCKQUOTE>'&lt;input '+=20
+  <BLOCKQUOTE>'name=3D"'+options.name+'" '+ 'type=3D"file" '+ =
+'HIDEFOCUS=3D"true" '+=20
+  </BLOCKQUOTE>'/&gt;' </BLOCKQUOTE>
+<BLOCKQUOTE>).css({=20
+  <BLOCKQUOTE>position: 'relative', display: 'block', marginLeft: =
+-175+'px',=20
+    opacity: 0 </BLOCKQUOTE>}); </BLOCKQUOTE>
+<P></P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/111103023226426909651/">http://code.goog=
+le.com/u/111103023226426909651/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Fri Jan  2 10:10:03 2009">Jan 2, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>how I can prevent a file sending if I got =
+"myUpload.filename()=3D=3D'' "?=20
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/111103023226426909651/">http://code.goog=
+le.com/u/111103023226426909651/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat Jan  3 05:23:36 2009">Jan 3, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>I have found a solution of this problem, it's very simple... just: =
+</P>
+<P>onSelect: function(){ if (myUpload.filename()=3D=3D''){=20
+<BLOCKQUOTE>break; </BLOCKQUOTE>
+<BLOCKQUOTE>} </BLOCKQUOTE>}=20
+<P></P>
+<P>it's work fine. :) </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <SPAN=20
+class=3Duserlink>tsveteli...@gmail.com</SPAN>, </SPAN><SPAN class=3Ddate =
+
+title=3D"Tue Jan  6 08:17:28 2009">Jan 6, 2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>hi </P>
+<P>it is possible to use this plug-in more than one time in the same =
+page. I am=20
+trying to write a page, where I will give an upload option everywhere =
+where the=20
+class name of html tag is "upload". </P>
+<P>My code is: var myUpload =3D $('.upload').upload({.... </P>
+<P>but one I have 2 or more html tags with classes "upload" then the =
+plug-in=20
+stop working How can I resolve my issue? </P>
+<P>Thank you for your help Tsvetelin </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/117442316431438954707/">http://code.goog=
+le.com/u/117442316431438954707/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Tue Jan 13 06:42:03 2009">Jan 13, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Hi, </P>
+<P>An excellent plugin! Thank you. Just one small note from my side: =
+when file=20
+size exceeds the max allowed request length, I don't reach onComplete =
+code. I=20
+tested plugin inside ASP.NET page under IIS, uploading 7 MB file. =
+Default=20
+setting for maxRequestLength is 4MB. If I extend this value to &gt; 7MB, =
+plugin=20
+works. </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/101466080553392182098/">http://code.goog=
+le.com/u/101466080553392182098/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Fri Feb 20 01:41:22 2009">Feb 20, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Very cool job!!! But i have 1 question: Do not work autoSubmit: =
+false;=20
+exactly autoSubmit: false; =3D autoSubmit: true; File submiting after =
+browse=20
+close. </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/101466080553392182098/">http://code.goog=
+le.com/u/101466080553392182098/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Fri Feb 20 02:58:20 2009">Feb 20, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>error in Methods =E2=80=94 </P>
+<P>autoSubmit: false,&lt;---autoSubmit: options.autoSubmit </P>
+<P></P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/101757339445682284444/">http://code.goog=
+le.com/u/101757339445682284444/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat Feb 28 13:18:20 2009">Feb 28, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>{{{{ var uploader =3D $("#upload").upload({ ... }); uploader.onSelect =
+=3D=20
+function() {=20
+<BLOCKQUOTE>uploader.autoSubmit =3D false; var re =3D new RegExp<A=20
+  =
+href=3D"http://code.google.com/p/ocupload/w/edit/RegExp">?</A>("(jpg|jpeg=
+|gif|png)$",=20
+  "i"); if (!re.test(uploader.filename())) {=20
+  <BLOCKQUOTE>alert("Only JPG, JPEG, GIF, or PNG image file can be =
+uploaded");=20
+  </BLOCKQUOTE>} else {=20
+  <BLOCKQUOTE>uploader.submit(); </BLOCKQUOTE>} </BLOCKQUOTE>}; }}}}=20
+<P></P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/117303215078901391305/">http://code.goog=
+le.com/u/117303215078901391305/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Fri Mar  6 03:52:23 2009">Mar 6, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Where is FULL example? </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/114211809768526720533/">http://code.goog=
+le.com/u/114211809768526720533/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Tue Mar 24 07:42:41 2009">Mar 24, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>how can I cancel an upload in progress? </P>
+<P>thanks! </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/105300634170242586606/">http://code.goog=
+le.com/u/105300634170242586606/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Mon Mar 30 02:43:55 2009">Mar 30, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>First off thanks Michael for this plugin </P>
+<P>apparently i am the only one having the following issue: It doesn't =
+seem to=20
+work on the mac (OS X 10.4 +firefox 3.0.7), but with safari it does =
+work. </P>
+<P>Any tips?? </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/106817907939355061874/">http://code.goog=
+le.com/u/106817907939355061874/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat May 23 03:58:12 2009">May 23, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Hi can i change file dialog box title and ext. ? =
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/102178790915544302858/">http://code.goog=
+le.com/u/102178790915544302858/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Tue Aug 11 23:27:59 2009">Aug 11, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Plugin is very good, thanks, but I have one question. Where I can get =
+an=20
+tmp_name? and where it stores. i can POST filename() to php script but =
+what=20
+should i pick in move_uploaded_file(), i can't find tmp. without it its =
+nothing=20
+to download. Thanks for answer </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/102178790915544302858/">http://code.goog=
+le.com/u/102178790915544302858/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Wed Aug 12 03:16:41 2009">Aug 12, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>it's ok, everything found, cool plugin the same is for fotogalery =
+very good=20
+thing </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/102178790915544302858/">http://code.goog=
+le.com/u/102178790915544302858/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Mon Aug 17 03:17:14 2009">Aug 17, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>but i've just found the question, how can i return any variable from =
+my php=20
+script after onComplete() i should know is the same file exist. Because =
+there=20
+isn't function in javascript that check file for existance=20
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/102178790915544302858/">http://code.goog=
+le.com/u/102178790915544302858/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Mon Aug 17 04:52:02 2009">Aug 17, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>sorry but i understand how it to recieve callback //javascript =
+onComplete:=20
+function(data) {=20
+<BLOCKQUOTE>changingname =3D CurUpload<A=20
+  =
+href=3D"http://code.google.com/p/ocupload/w/edit/CurUpload">?</A>.filenam=
+e();=20
+  ulfotoname =3D basename(changingname,'.'); if (data =3D=3D 'true') {=20
+  <BLOCKQUOTE>AddNewFotoDiv<A=20
+    =
+href=3D"http://code.google.com/p/ocupload/w/edit/AddNewFotoDiv">?</A>(); =
+
+  </BLOCKQUOTE>alert("File uploaded!"); } else { alert("File exist!"); } =
+
+</BLOCKQUOTE>}, //phpscript if (file_exists($pathtofile)) { echo =
+'false'; } else=20
+{ echo 'true'; }=20
+<P></P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/110468414075424731464/">http://code.goog=
+le.com/u/110468414075424731464/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Tue Aug 18 08:24:10 2009">Aug 18, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Hi guys, To fix the issue with ie7 not being able to click =
+accurately(you=20
+have to do a double click to upload a file, this is due to the browse =
+button=20
+being positioned incorrectly in ie7), do the following changes: </P>
+<P>line 91: </P>
+<P><STRONG>left: e.pageX-container.offset().left-175+'px'</STRONG> </P>
+<P>Finally, replace -175px to 0 of the input's css property on line 63: =
+</P>
+<P><STRONG>marginLeft: 0+'px',</STRONG> </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/116136877027686025924/">http://code.goog=
+le.com/u/116136877027686025924/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Tue Sep 29 23:10:41 2009">Sep 29, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Hi </P>
+<P>is anyone else having issues whereby the image used as buton that =
+activates=20
+the upload, sometime it doesn't appear unless the browser is refreshed?=20
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/101977307354489832447/">http://code.goog=
+le.com/u/101977307354489832447/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Tue Oct  6 12:04:59 2009">Oct 6, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>I have a small problem with this great plugin. When using autoSubmit: =
+true,=20
+not only the file form is submitted, but also the main form where the =
+file is=20
+part of. </P>
+<P>Is there a way to prevent this? </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/107161120457140278900/">http://code.goog=
+le.com/u/107161120457140278900/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Wed Oct 21 03:11:02 2009">Oct 21, =
+2009</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>It will be very interesting to know the size of loaded file. How can =
+I know=20
+the size of the file to upload? </P>
+<P>Because It's exceed the maximum size then I can not start the =
+process.=20
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/Joe.Ekiert@gmail.com/">http://code.googl=
+e.com/u/Joe.Ekiert@gmail.com/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Mon Feb  8 13:36:25 2010">Feb 8, =
+2010</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>I need to pass a variable that I have hidden in my &lt;a =
+href=3D"#"&gt; tag as=20
+a 'method' attribute. </P>
+<P>How can I reference this? I keep trying to throw a onSubmit: =
+function() { var=20
+variable =3D $(this).attr("attrName"); alert(variable); }, </P>
+<P>but it never gets passed. Hand anyone? </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/116755950625871865200/">http://code.goog=
+le.com/u/116755950625871865200/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Fri Jul 23 08:03:47 2010">Jul 23, =
+2010</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>A couple enhancements: 1. autoSubmit doesn't seem to work. Believe it =
+is=20
+caused by:=20
+<BLOCKQUOTE>$.extend(this, { autoSubmit: true, ... </BLOCKQUOTE>
+<BLOCKQUOTE>should be:=20
+  <BLOCKQUOTE>$.extend(this, { autoSubmit: options.autoSubmit, ...=20
+</BLOCKQUOTE></BLOCKQUOTE>2. Creation of the hidden inputs shouldn't set =
+the=20
+value. That should be done by a subsequent $("#" + key).val(value) call=20
+<P></P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <SPAN=20
+class=3Duserlink>goo...@creativetribe.co.uk</SPAN>, </SPAN><SPAN =
+class=3Ddate=20
+title=3D"Wed Sep 22 07:59:35 2010">Sep 22, 2010</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>How do I add an upload progress bar to this plugin? =
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/116538526348942296849/">http://code.goog=
+le.com/u/116538526348942296849/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Tue Oct 12 11:08:43 2010">Oct 12, =
+2010</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>how it works? </P>
+<P>how is the html structure? </P>
+<P>how is invoked? </P>
+<P>it needs too much documentation </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/114631423182317995633/">http://code.goog=
+le.com/u/114631423182317995633/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat Nov 13 03:01:39 2010">Nov 13, =
+2010</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>I can't find a working demo anywhere. Could you please add one?=20
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/106634420096391257596/">http://code.goog=
+le.com/u/106634420096391257596/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Fri Jan 21 05:02:22 2011">Jan 21, =
+2011</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Don't work for me. With firebug i can see de iframe hidden and=20
+&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt; empty. </P>
+<P>What i'm doing wrong ? </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/100582841262843477665/">http://code.goog=
+le.com/u/100582841262843477665/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat Jan 29 04:08:00 2011">Jan 29, =
+2011</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>chris.pe...@gmail.com, Yes, You'e right about 1, but i haven't found =
+troubles=20
+with 2. </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/100644314687867001783/">http://code.goog=
+le.com/u/100644314687867001783/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat Mar 12 05:54:56 2011">Mar 12, =
+2011</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Hy guys. If you want to fix &lt;IE8 problems, do the following =
+changes: </P>
+<P>line 59: position: 'absolute', display: 'block', marginLeft: 0+'px', =
+opacity:=20
+0 </P>
+<P>line:88 top: e.pageY-container.offset().top+25+'px', left:=20
+e.pageX-container.offset().left-175+'px' </P>
+<P>works for me in FF2+,IE6+,Chrome. </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/115443027583990393182/">http://code.goog=
+le.com/u/115443027583990393182/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Fri Mar 18 17:03:20 2011">Mar 18, =
+2011</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Unfortunately this plugin breaks absolute positioning because it =
+wraps the=20
+element in a div but fails to set up the div to take over positioning =
+duties.=20
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/107761773755126874001/">http://code.goog=
+le.com/u/107761773755126874001/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sun Aug 28 03:53:14 2011">Aug 28, =
+2011</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>There is a very small yet critical bug that doesn't let user select =
+files, on=20
+line 84 </P>
+<P>input.css('marginTop', -container.height()-10+'px'); </P>
+<P>which should be </P>
+<P>input.css('marginTop', -(container.height()-10)+'px'); </P>
+<P>Plus adding modify following line to have a cursor pointer. </P>
+<BLOCKQUOTE>/<STRONG></STRONG> Find the container and make it nice and =
+snug=20
+  <STRONG>/=20
+  <BLOCKQUOTE>var container =3D element.parent().css({=20
+    <BLOCKQUOTE>position: 'relative', height: =
+element.outerHeight()+'px',=20
+      width: element.outerWidth()+'px', overflow: 'hidden', cursor: =
+'pointer',=20
+      margin: 0, padding: 0 </BLOCKQUOTE>});=20
+</BLOCKQUOTE></BLOCKQUOTE></STRONG></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/102827967040612344679/">http://code.goog=
+le.com/u/102827967040612344679/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Wed Sep  7 15:59:54 2011">Sep 7, =
+2011</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Great! Flexible!!! Very cool! Thank you! </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/117353961388755317558/">http://code.goog=
+le.com/u/117353961388755317558/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Mon Feb  6 02:27:28 2012">Feb 6, =
+2012</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>Nice plugin! I'd like 1 more feature - to be able not to add form tag =
+around=20
+the input. Maby I want to add it to my html. </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/117353961388755317558/">http://code.goog=
+le.com/u/117353961388755317558/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Mon Feb  6 06:43:37 2012">Feb 6, =
+2012</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>1. Yes, I think the cursor should be changed but it should not be =
+hardcoded=20
+but inherit it from the object ocupload was assigned to: </P>
+<P>var element_cursor =3D element.css('cursor'); </P>
+<P>/<STRONG></STRONG> File Input <STRONG>/ var input =3D $(=20
+<BLOCKQUOTE>'&lt;input '+ 'name=3D"'+options.name+'" '+ 'type=3D"file" =
+'+ '/&gt;'=20
+</BLOCKQUOTE>).css({=20
+<BLOCKQUOTE>position: 'absolute', display: 'block', opacity: 0, cursor:=20
+  element_cursor </BLOCKQUOTE>}); </STRONG>
+<P></P>
+<P>2. Like I see from comments above and that the script didn't work for =
+me=20
+either, file input position has been hardcoded. One should get height =
+and width=20
+of the file input and position mouse in the center. Also, file input =
+should be=20
+position absolute, not relative; </P>
+<P>Here are my fixes <A =
+href=3D"https://github.com/hkirsman/jquery-ocupload"=20
+rel=3Dnofollow>https://github.com/hkirsman/jquery-ocupload</A> . I did =
+sent Pull=20
+Request, but don't know if it's accepted by the author. =
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/111497269559055910878/">http://code.goog=
+le.com/u/111497269559055910878/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Wed Mar 21 05:56:39 2012">Mar 21, =
+2012</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>I had a problem where the onComplete response was stripping html =
+tags. To get=20
+round this I changed line 233 from </P><PRE class=3Dprettyprint>					var =
+response =3D $(myFrame.contentWindow.document.body).text();</PRE>
+<P>to </P><PRE class=3Dprettyprint>					var response =3D =
+$(myFrame.contentWindow.document.body).html();</PRE></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/100528424402666306309/">http://code.goog=
+le.com/u/100528424402666306309/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat May 19 05:50:20 2012">May 19, =
+2012</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>how it work with jquery ui ? </P>
+<P>the jquery ui'version is 1.8.20.! </P>
+<P>thank you! </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/100421031362905992887/">http://code.goog=
+le.com/u/100421031362905992887/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Sat Jun 30 08:13:09 2012">Jun 30, =
+2012</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>was not working, i've spent several hours.. </P>
+<P>apparently because of css @font-face.. </P>
+<P>after removing @font-face and then pasting it back - started working =
+:|=20
+</P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/110471894689709961813/">http://code.goog=
+le.com/u/110471894689709961813/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Wed Jul 11 09:49:39 2012">Jul 11, =
+2012</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<P>It is possible to get the temporary name of the file (tmp_name) in =
+select? Or=20
+create a formula that will result in the same name tmp_name? Because I =
+want to=20
+create a progress bar for the plugin. </P></DIV></DIV></DIV>
+<DIV class=3Dartifactcomment><SPAN class=3Dauthor>Comment by <A =
+class=3Duserlink=20
+href=3D"http://code.google.com/u/113975188388232404564/">http://code.goog=
+le.com/u/113975188388232404564/</A>,=20
+</SPAN><SPAN class=3Ddate title=3D"Mon Jul 16 16:46:34 2012">Jul 16, =
+2012</SPAN>=20
+<DIV>
+<DIV class=3Dcommentcontent>
+<H1><A name=3DUpdate></A>Update<A class=3Dsection_anchor=20
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Update"></A>=
+</H1>
+<H2><A =
+name=3D"Forked_hkirsman's_version_and_updated_it_a_little_more."></A>Fork=
+ed=20
+hkirsman's version and updated it a little more.<A =
+class=3Dsection_anchor=20
+href=3D"http://code.google.com/p/ocupload/wiki/Documentation#Forked_hkirs=
+man's_version_and_updated_it_a_little_more."></A></H2>
+<BLOCKQUOTE><I><STRONG>Note:</STRONG> I have not looked at/updated the=20
+  documentation.</I> </BLOCKQUOTE>
+<P>Project Collection: <A =
+href=3D"https://github.com/vol7ron/jquery-ocupload"=20
+rel=3Dnofollow>https://github.com/vol7ron/jquery-ocupload</A> </P>
+<P>Individual Files:=20
+<UL>
+  <LI><A=20
+  =
+href=3D"https://github.com/vol7ron/jquery-ocupload/blob/master/jquery.ocu=
+pload.js"=20
+  =
+rel=3Dnofollow>https://github.com/vol7ron/jquery-ocupload/blob/master/jqu=
+ery.ocupload.js</A>=20
+  </LI>
+  <LI><A=20
+  =
+href=3D"https://github.com/vol7ron/jquery-ocupload/blob/master/jquery.ocu=
+pload-min.js"=20
+  =
+rel=3Dnofollow>https://github.com/vol7ron/jquery-ocupload/blob/master/jqu=
+ery.ocupload-min.js</A>=20
+  </LI></UL>
+<P></P></DIV></DIV></DIV></DIV></DIV>
+<SCRIPT type=3Dtext/javascript>=0A=
+ function delComment(sequence_num, create_time, delete_mode) {=0A=
+ var f =3D document.forms["delcom"];=0A=
+ f.sequence_num.value =3D sequence_num;=0A=
+ f.create_time.value =3D create_time;=0A=
+ f.mode.value =3D delete_mode;=0A=
+ f.submit();=0A=
+ return false;=0A=
+ }=0A=
+ </SCRIPT>
+</DIV><BR>
+<DIV class=3Dartifactcomment><SPAN class=3Dindicator>=E2=96=BA</SPAN> <A =
+
+href=3D"https://www.google.com/accounts/ServiceLogin?service=3Dcode&amp;l=
+tmpl=3Dphosting&amp;continue=3Dhttp%3A%2F%2Fcode.google.com%2Fp%2Focuploa=
+d%2Fwiki%2FDocumentation&amp;followup=3Dhttp%3A%2F%2Fcode.google.com%2Fp%=
+2Focupload%2Fwiki%2FDocumentation">Sign=20
+in</A> to add a comment </DIV>
+<FORM method=3Dpost name=3Ddelcom action=3D../w/delComment.do><INPUT =
+type=3Dhidden=20
+name=3Dsequence_num> <INPUT type=3Dhidden name=3Dcreate_time> <INPUT =
+type=3Dhidden=20
+name=3Dmode> <INPUT value=3DDocumentation type=3Dhidden name=3Dpagename> =
+<INPUT=20
+type=3Dhidden name=3Dtoken> </FORM>
+<SCRIPT src=3D""></SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+ prettyPrint();=0A=
+ </SCRIPT>
+
+<SCRIPT type=3Dtext/javascript src=3D""></SCRIPT>
+
+<SCRIPT type=3Dtext/javascript src=3D""></SCRIPT>
+
+<SCRIPT type=3Dtext/javascript src=3D""></SCRIPT>
+</DIV>
+<DIV dir=3Dltr id=3Dfooter>
+<DIV class=3Dtext><A=20
+href=3D"http://code.google.com/projecthosting/terms.html">Terms</A> - <A =
+
+href=3D"http://www.google.com/privacy.html">Privacy</A> - <A=20
+href=3D"http://code.google.com/p/support/">Project Hosting Help</A> =
+</DIV></DIV>
+<DIV style=3D"MARGIN-TOP: -20px" class=3DhostedBy><SPAN=20
+style=3D"VERTICAL-ALIGN: top">Powered by <A=20
+href=3D"http://code.google.com/projecthosting/">Google Project =
+Hosting</A></SPAN>=20
+</DIV>
+<SCRIPT type=3Dtext/javascript>_CS_reportToCsi();</SCRIPT>
+</BODY></HTML>
+
+------=_NextPart_000_0000_01CDDFCC.B92DA070
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.gstatic.com/codesite/ph/images/defaultlogo.png
+
+iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAAXNSR0IArs4c6QAAAMBQTFRF8PP1
+AFKLAGC6QHyjAFuqAFSRAF6yM3CWisjvYoKRAFmjAFWYXpO0j7LIVpXIAmXGOYnMv9XnMFlver7u
+AEx7AE6BADtgr8bVz97pUHOFVp/VAFCFAUFov9Ldebbbf6rJAERwPYCy7/P3f6W7b5y5IWWREkpp
+3+jvIWylAFedf6zSD1uND2SqAEh3HHjMEleAYavkn77UD1mFAEZ4QGZ6wM3ToLO9Dj9YHlBp0Nne
+gJmm4ObpkKayD16YADNN////yDAi/AAAAAF0Uk5TAEDm2GYAAAABYktHRACIBR1IAAAACXBIWXMA
+AAsTAAALEwEAmpwYAAAAB3RJTUUH2gIEADIgXM0lZwAAAs1JREFUSMetlmtX4jAQhk2btpCCIDYF
+qQgUUKuuLAp4z/z/f7UzSS+0tkd2z74flNM+T9NMJoGTk/+Sj/Z2e7E7nh++KMrnsfweYdvDP+3j
++fF5n4dHGu9KvVyNLddNjc8tPmDQrLaVurzqWyi4/BLJgTJ5beZfW8gbY0botWd7qF7U8hfEP1qp
+oI3r1vi07+OHOh7HX6W8HoHzZ7W6SpLEl0rtanmv9dg7FLi8HTcJb8Sf93q94o0wQogG4Q2Xt5Pz
+mSAaBc3/zvCK4H8X9pq3rArfKOxpeSv84RSqwt60Qy2vB/BZqbFwea+pHSzBmDjkeSIl04ITHqy1
+aQfXshzvBqDvusUA/gJg+EACo8Yq8ZinGDKBmxdKpnjlDHmnMAqedwBOHwTd1UloBrcbACOwUBtv
+Sq1bfc5REAs4c12nO8myuMUZrwDmjhbYjLYt7hfiMZkwgSKnSSKNgDwTodpSRefcJEGB85IA81Rg
+zMWuCbG2H/qECCrCHWZDwtDPhEBvvF16pjwLFPxNLtB0RYcMI+D7/CJ+r+u6G6CAYRO44yIXkkgL
+LIYlM8LuI125LQkJ83CSWiMB13etBWcIk1TIW0MLshvDSKQCAnI9xA8jx/HweodFFUGXb/SQCbgI
+sa7S1HEiO4ZJVBFm2MMjgA3+Y4dlxQHYegRxt05IOlT2ktD9chy5gZv7KJIVwaeOHMEUO5+EKWY+
+/6L6yxtYIl8rDHGdjJA1IE4+ALBrBId21YI6OSIhx40gMbOKQPdRwKJkAmN/JaR4FBkhCCoCKwss
+56M1CUFVuNS3lxDfM1YINNdgCfAUNAgrWmOveDgKHTwWJsRXqmQERg1t5zQ+X+KpEXskCL8sGIKt
+bPs+inJcSrwQ6Li1QlSCKUGapCcPBDxprJ6b7mzuWt+Dp3p48L24UyqkpW4KDYWH0nvpcP05g9K3
++etP+Ev7H3/o/AHSZrxBYW5xrQAAAABJRU5ErkJggg==
+
+------=_NextPart_000_0000_01CDDFCC.B92DA070--

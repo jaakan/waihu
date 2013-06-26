@@ -1,0 +1,275 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META HTTP-EQUIV="pragma" CONTENT="no-cache" /> 
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate" /> 
+
+<!-- 引入外部API -->
+
+<script type="text/javascript" 
+src="../public/js/jquery-plugin/jquery-easyui-1.2.3/jquery.easyui.min.js"></script>
+
+<script type="text/javascript" 
+src="../public/js/jquery-plugin/upload/ajaxfileupload.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	var meta=new Array();
+	$("#update input[name='update']").unbind("click");
+	$("#update input[name='update']").click(function(){
+		////alert("单击‘上传任务’");
+		ajaxFileUpload(onComplete);
+	});
+	
+	function ajaxFileUpload(onComplete)
+	{
+
+		$.ajaxFileUpload
+		(
+			{
+				url:'upload.jsp',
+				secureuri:false,
+				fileElementId:'upload',
+				beforeSend:function()
+				{
+					$("#loading").show();
+				},
+				complete:function()
+				{
+					$("#loading").hide();
+					onComplete();
+					
+				},				
+				success: function (data, status)
+				{
+					
+				},
+				error: function (data, status, e)
+				{
+					
+				}
+			}
+		)
+		
+		return false;
+   
+	}
+ 
+	//上传完成；
+	function onComplete(){
+		$.post("newTask.jsp",{"req":"xlsMeta"},function(data,status){
+			var xlsMeta=eval("("+data+")").xlsMeta;
+			if(xlsMeta.status=="error"){
+				//alert("文件上传失败，请重试！");
+			}else if(xlsMeta.status=="success"){
+				var titles=new Array();
+				titles=xlsMeta.titles;
+				var clone=$("#_setMeta").html();
+				$("#setMeta").html("");
+				$("#setMeta").html(clone);
+				$("#setMeta").show();
+				$("#setMeta").window({
+					width:650,
+					height:400
+				});
+				for(var i=0;i<titles.length;i++){
+					var select=$("#select").clone();
+					$("#setMeta table tbody").append("<tr><td>"
+							+titles[i].title+"</td><td><select>"
+							+select.html()+"</select></td><td></td></tr>");
+				}
+				
+				//单击提交按钮;
+				$("#setMeta input[name='submitTask']").click(function(){
+					onClickSubmitTask(titles);
+					                                    });
+				
+				//选中下拉框;
+				$("#setMeta table tbody td select").change(function(){
+					var $option=$("option:selected",this);
+					var $tr=$(this).parent().parent();
+					if($option.val()=="select"){
+						alert("请将选项值用英文逗号隔开");
+						$($("td",$tr)[2]).html("<input type='input'></input>");
+					}
+				});
+			}
+		});
+	}//end onComplete;
+	
+	function onClickSubmitTask(titles){
+		{
+			//alert($.toJSONString(titles));
+			
+			var types=$("#setMeta table tbody tr");
+			////alert(types.length);
+			meta=new Array();
+			for(var j=0;j<types.length;j++){
+				var _meta=new Object();
+				_meta.name=$($("td",types[j])[0]).text();
+				_meta.type=$("td select",types[j]).val();
+				_meta.value=$("td input",types[j]).val();
+				//alert($.toJSONString(_meta));
+				meta.push(_meta);
+			}
+			task.maker=user.id;
+			task.metaData=meta;
+			//alert($.toJSONString(task));
+			
+		    //设置任务接收人列表；
+			var clone=$("#_receivers").html();
+			$("#setMeta").html("");
+			$("#setMeta").html(clone);
+			var childrenArray=new Array();
+			for(var i=0;i<titles.length;i++){
+				var child=new Object();
+				child.id=i;
+				child.text=titles[i].title;
+				childrenArray.push(child);
+			}
+			var childrenObj=new Object();
+			childrenObj.arr=childrenArray;
+			//alert($.toJSONString(childrenObj));
+			$("#setMeta ul").tree({
+				"data":childrenArray
+				});
+			var column;
+			$("#setMeta ul").tree({"onSelect":function(node){
+				column=node.id;
+				
+				//设置tasklist表格中的link值，用于指定metaData与任务表格间的关系;
+				task.link=new Object();
+				task.link.receivers=node.text;
+				task.link.keyColumn=meta[0].name;
+				}
+			});
+			
+			//获取提交的接受者;
+			$("#setMeta input[name='chooseReceiver']").click(function(){
+				                                     onClickChooseReceiver(column);}
+			                                       );
+		}
+	}
+	
+	function onClickChooseReceiver(column){
+			//alert(column);
+			$.post("newTask.jsp",{"req":"getReceiver","id":column},function(data,status){
+				//alert(data);
+				var getData=eval("("+data+")");
+				task.receivers=getData.receivers
+				//alert(task.receivers[1].name);
+				updataToDB();
+			});
+	}
+	
+	function updataToDB(){
+		var clone=$("#_updataToDB").html();
+		$("#setMeta").html("");
+		$("#setMeta").html(clone);
+		$("#setMeta input[name='addTaskname']").click(function(){
+			if($("#setMeta input[name='taskname']").val().length==0){
+				alert("输入内容不能为空");
+				return false;
+			}
+			task.taskName=$("#setMeta input[name='taskname']").val();
+			//alert(task.taskName);
+			//$("#setMeta p").append($.toJSONString(task));
+			//alert($.toJSONString(task));
+			
+			//设置督导列表；
+			$("#setMeta").html($("#setSupervisors").show());
+			$("#setMeta").window();
+			$.post("newTask.jsp",{"req":"setSupervisors"},function(data,status){
+				var supervisors=eval("("+data+")").supervisors;
+				//alert($.toJSONString(supervisors));
+				var _ss=new Object();
+				_ss={
+						id:"superviors",
+						text:"选择督导",
+						state:"closed",
+						children:[]
+				};
+				_ss.children=supervisors;
+				var _arr=new Array();
+				_arr.push(_ss);
+				$("#setSupervisors ul").tree({
+					checkbox:true,
+					data:_arr
+				});
+				
+				//确认督导列表;
+				$("#setSupervisors input[name='setSupervisors']").click(function(){
+					var _checked=$("#setSupervisors ul").tree("getChecked");
+					var checked=new Array();
+					var msg="确认选择该任务的督导人为：";
+					for(var i=0;i<_checked.length;i++){
+						var obj=new Object();
+						obj.id=_checked[i].id;
+						obj.name=_checked[i].text;
+						msg+=obj.name+",";
+						checked.push(obj);
+					}	
+						if(confirm(msg)){
+							task.supervisors=checked;
+						}else{
+							return false;
+						}
+					
+					//上传数据;
+					$.post("newTask.jsp",{"req":"updataToDB","taskData":$.toJSONString(task)},function(data,status){
+						alert("上传成功！");
+						$("#setMeta").window("close");
+						initMenu();
+						$.post("newTask.jsp",{"req":"deleteTmpFile"},function(data,status){
+							//.........
+						});
+					});  //end post to newTask.jsp request updataToDB;
+				}); //end Click setSupervisors button;
+			});//end post to newTask.jsp request setSupervisors;
+			
+		});//end Click addTaskname;
+	}//end updataToDB();
+
+});
+</script>
+
+<div id="newTask">
+<div id="update"><label>上传任务</label><input id="upload" type="file" name="taskFile" ></input>
+<input type="button" value="上传任务" name="update" ></input>
+<div id="loading">LOADING.........</div>
+</div>  <!-- update end -->
+<div id="setMeta" style="display:none"></div>
+<div id="_setMeta" style="display:none">
+<select id="select" style="display:none">
+<option value="text">静态文本</option>
+<option value="input">输入文本框</option>
+<option value="textarea">输入文本域</option>
+<option value="select">下拉列表</option>
+</select>
+<table>
+<thead><tr><th>字段</th><th>字段属性</th><th>默认值</th></tr></thead>
+<tbody></tbody>
+</table>
+<input type="button" name="submitTask" value="提交"></input>
+</div>
+<div id="_receivers" style="display:none">
+选择一列作为任务接收者<br>
+<ul></ul>
+
+<input type="button" name="chooseReceiver" value="确定"></input>
+</div>
+
+<div id="_updataToDB" style="display:none">
+<center>
+<br><br><br>
+<label for="taskname">输入任务名称：</label>
+<input type="text" name="taskname"></input>
+<input type="button" name="addTaskname" value="确定"></input>
+</center>
+<p></p>
+</div>
+
+<div id="setSupervisors" style="display:none">
+<ul></ul>
+<input type="button" name="setSupervisors" value="确定"></input>
+</div>
+
+</div>  <!--  newTask end -->

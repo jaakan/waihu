@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+　　"http://www.w3.org/TR/html4/loose.dtd">
+　　<html>
+　　<head>
+　　<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+　　<title>上传</title>
+　　</head>
+　　
+　　<body>
+　　<!-- enctype的值很重要,upload.jsp为处理上传的jsp-->
+
+    <center>
+    <p>声明：</p>
+    <p>
+    1.本页面用于上传到期外呼目标库，用于发布外呼目标，上传后回更新数据库信息，请谨慎上传！
+    </p>
+    <p>
+    2.上传的格式，请下载模板，并在模板中填写内容，保存后上传。切勿更改模板格式。<a href="../model/duers.xls">点击下载模板</a>
+    </p>
+    </center>
+    
+    
+　　<form name="form1" method="post" enctype="multipart/form-data" action="uploadTest.jsp" >
+　　<p>
+　　　<input name="file1" type="file">
+　　</p>
+　　<p>
+　　　<input type="submit" name="Submit" value="上传">
+　　</p>
+　　</form >
+　　
+　　</body>
+　　</html>

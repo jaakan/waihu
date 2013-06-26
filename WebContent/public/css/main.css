@@ -1,0 +1,74 @@
+/* CSS Document */
+.left{
+float:left;
+}
+
+ul li.link{
+float:left;
+list-style-type:none
+}
+
+*{
+boder:none;
+padding:0px;
+margin:0px;
+}
+
+body {
+margin:0 auto;
+background:#DBF4EC;
+}
+
+#main {
+margin:0 auto;
+width: 960px;
+}
+
+
+#header {
+
+}
+
+#login{
+margin:10px;
+float:right;
+}
+#login li{
+margin:0px 5px;
+
+}
+
+#banner {
+
+height:160px;
+
+}
+
+#links {
+
+height:40px;
+margin:auto;
+text-align:center;
+width:605px;
+}
+
+#contain {
+
+}
+
+#containleft{
+
+width:200px;
+height:500px;
+}
+
+#containright{
+
+height:500px;
+overflow:auto;
+}
+
+#footer{
+
+height:80px;
+}

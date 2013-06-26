@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#tableData{
+text-algin:center;
+margin:0px auto;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../public/js/jquery-plugin/jquery-easyui-1.2.3/themes/gray/easyui.css"  />
+
+<script type="text/javascript" src="../public/js/jquery/jquery1-7-2.js"></script>
+<script type="text/javascript"  src="../public/js/jquery-plugin/jquery-easyui-1.2.3/jquery.easyui.min.js"></script>
+<script type="text/javascript"  src="../public/js/jquery-plugin/jquery-json/jquery.json.js"></script>
+<script type="text/javascript" 
+  src="../public/js/jquery-plugin/jquery-easyui-1.2.3/locale/easyui-lang-zh_CN.js"></script>
+  
+<script type="text/javascript">
+//定义表格标签metaData；
+var metaData;
+var taskName;
+var rowIndex;
+$(document).ready(init);
+
+function init(){
+	//控制打开窗口最大化 ;
+	
+	
+	//加载初始化；
+	$.post("executeTask.jsp",{req:"init"},function(data,status){
+		//alert("data:"+data);
+		var res=eval("("+data+")");
+		taskName=res.taskName;
+		document.title=taskName;
+		//获取表格标签metaData；
+		//alert("res.metaData:"+$.toJSONString(res.metaData));
+		//alert("res.tableData:"+$.toJSONString(res.tableData));
+		metaData=res.metaData;
+		
+		//定义并获取表格数据tableData；
+		var tableData=res.tableData;
+		initTable(tableData);
+	});
+	
+}
+
+function initTable(tableData){
+	var saveData=new Object();
+	var columns=new Array();
+	for(var i=0;i<metaData.length;i++){
+		var column=new Object();
+		column.field=metaData[i].name;
+		column.title=metaData[i].name;
+		column.width=20;
+		columns.push(column);
+	}
+	//alert("column:"+$.toJSONString(columns));
+	
+	//alert("tableData:"+$.toJSONString(tableData));
+	var _height=screen.availHeight*3/5;
+	var _width=screen.availWidth-30;
+	$('#tt').datagrid({
+		title:'数据',
+		height: _height,
+		width:_width,
+		url:"getTableData.jsp",
+		fitColumns: true,
+		nowrap:true,
+		rownumbers:true,
+		pagination:true,
+		pageList:[10,20],
+		showFooter:true,
+		singleSelect:true,
+		columns:[columns]
+	});
+	
+	
+	
+	//添加单击表格事件；
+	$("#tt").datagrid({
+		onClickRow:function(index,data){
+			//alert(index);
+			//alert(data['账号']);
+			//弹出editor窗口；
+			rowIndex=index;
+			showEditor(index,data);
+		}
+	});
+}
+
+function showEditor(index,data){
+	var _height=screen.availHeight*2/3;
+	var _width=screen.availWidth/2;
+	$("#editor").window({
+		width:_width,
+		height:_height
+	});
+	var id=metaData[0].name;
+	var value=data[metaData[0].name];
+	var _metaData=$.toJSONString(metaData)
+	//当单击选中某行，以此行的第一列数据作为id查询数据库;
+	$.post("editorTable.jsp",
+			{
+		"req":"getRow",
+		"id":id,
+		"value":value,
+		"taskName":taskName,
+		"metaData":_metaData
+			},
+			function(data,status){
+				//alert("resData:"+data);
+				initEditor(eval("("+data+")"));
+			}
+	);
+	
+}
+
+
+//初始化initEditor;
+function initEditor(data){
+	var l=metaData.length;
+	//alert("metaData.length:"+l);
+	$("#editor").html("<table></table>");
+	$("#editor table").append("<thead><tr><th>字段</th><th>数据</th></tr></thead>");
+	$("#editor table").append("<tbody id='editorData'></tbody>");
+	for(var i=0;i<l;i++){
+		var $tr=$("<tr><td></td><td class='content'></td></tr>");
+		var td=$("td",$tr);
+		$("#editor table tbody").append($tr);
+		$(td[0]).html(metaData[i].name);
+		switch(metaData[i].type){
+		case 'text':
+			//alert("text");
+			$(td[1]).html(data[metaData[i].name]);
+			break;
+		case 'input':
+			//alert("input");
+			var $input=$(td[1]).append("<input class='input'></input>");
+			$("input",$input).val(data[metaData[i].name]);
+			break;
+		case 'select':
+			//alert("select");
+			var $select=$(td[1]).append("<select class='select'><option selected='true'></option></select>");
+			var types=metaData[i].value.split(",");
+			for(var j=0;j<types.length;j++){
+				if(data[metaData[i].name]==types[j]){
+					$("select",$select).append("<option selected='true'>"+types[j]+"</option>");
+				}else{
+					$("select",$select).append("<option>"+types[j]+"</option>");
+				}
+				
+			}
+			break;
+		case 'textarea':
+			//alert("textarea");
+			var $textarea=$(td[1]).append("<textarea class='textarea'></textarea>");
+			$("textarea",$textarea).val(data[metaData[i].name]);
+			break;
+		
+		}
+	}
+	$("#editor").append("<input type='button' name='save' value='保存'></input>");
+	$("#editor input[name='save']").unbind("click");
+	$("#editor input[name='save']").click(onClickSave);
+}
+
+function onClickSave(){
+	var saveData=new Object();
+	var $tbody=$("#editorData");
+	for(var i=0;i<metaData.length;i++){
+		var name=metaData[i].name;
+		var type=metaData[i].type;
+		var val;
+		switch(type){
+		case 'text':
+			//alert("type:"+type);
+			val=$($("td.content",$tbody)[i]).text();
+			
+			break;
+		case 'input':
+			//alert("type:"+type);
+			val=$("input",$("td.content",$tbody)[i]).val();
+			break;
+		case 'select':
+			//alert("type:"+type);
+			val=$("select",$("td.content",$tbody)[i]).val();
+			break;
+		case 'textarea':
+			//alert("type:"+type);
+			val=$("textarea",$("td.content",$tbody)[i]).val();
+			break;
+		}
+		
+		saveData[name]=val;
+	}
+	var _saveData=$.toJSONString(saveData);
+	var _metaData=$.toJSONString(metaData);
+	var id=metaData[0].name;
+	var value=saveData[metaData[0].name];
+	//alert(_saveData);
+	//alert(_saveData);
+	$.post("saveData.jsp",
+			{
+		"req":"saveData",
+		"id":id,
+		"value":value,
+		"taskName":taskName,
+		"metaData":_metaData,
+		"saveData":_saveData
+			},
+			function(data,status){
+				//alert(data);
+				var _data=eval("("+data+")");
+				if(_data.status=="success"){
+					var selected=$("#tt").datagrid("getSelected");
+					//开始更改表格数据;
+					$("#tt").datagrid("beginEdit",rowIndex);
+					for(var i=0;i<metaData.length;i++){
+						selected[metaData[i].name]=saveData[metaData[i].name];
+					}
+					//结束更改表格数据；
+					$("#tt").datagrid("endEdit",rowIndex);
+					$("#editor").window("close");
+				}else{
+					alert("保存失败！请重试！");
+				}
+			}
+	);
+}
+
+</script>
+
+</head>
+<body>
+<div id="tableData">
+<table id="tt"></table>
+</div>
+<div id="editor">
+
+</div>
+<div id="msg">
+</div>
+</body>
+</html>

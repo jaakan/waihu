@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 禁止缓存 -->
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>营业厅</title>
+<link rel="stylesheet" type="text/css" 
+  href="../public/js/jquery-plugin/jquery-easyui-1.2.3/themes/gray/easyui.css"  />
+
+<script type="text/javascript" 
+  src="../public/js/jquery/jquery1-7-2.js"></script>
+<script type="text/javascript" 
+  src="../public/js/jquery-plugin/jquery-easyui-1.2.3/jquery.easyui.min.js"></script>
+<script type="text/javascript" 
+  src="../public/js/jquery-plugin/jquery-easyui-1.2.3/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" 
+  src="../public/js/jquery-plugin/jquery-json/jquery.json.js"></script>
+  
+<script type="text/javascript">
+$(document).ready(init);
+
+
+function init(){
+	$("body").layout();
+	initMenu();
+}
+
+function initMenu(){
+	
+	var menu=new Array();
+	var node0=new Object();
+	node0={
+			id:0,
+			text:"任务列表",
+			state:"open",
+			children:[]
+	};
+	
+	menu.push(node0);
+	
+	$.get("index.jsp",{"req":"initMenu"},function(data,status){
+		//alert(data);
+		
+		// login start;
+		var res=eval("("+data+")");
+		if(res.login=="fail"){
+			alert("请先登陆！");
+			window.location.href="login.html";
+		}else if(res.login=="success"){
+			alert("登陆成功！");
+			var menuData=eval("("+data+")").menu;
+			for(var i=0;i<menuData.length;i++){
+				menu[i].children=menuData[i];
+			}
+			$("#menu").tree({
+				data:menu,
+				onClick:function(node){
+					//alert(node.text);
+					$.post("index.jsp",{"req":"executeTask","taskName":node.text},function(data,status){
+						onClickMenuNode(data,status,node);
+					});
+				}
+			});  
+		}//login end;
+
+		
+	});
+}
+
+function onClickMenuNode(data,status,node){
+	//alert(data);
+	window.open("executeTask.html");
+}
+
+</script>
+</head>
+<body>
+<div region="north" style="height:100px"></div>
+
+<div region="south" style="height:100px"></div>
+
+<div region="west" split="true" style="width:150px">
+<div id="menu"></div>
+</div>
+
+<div region="east" style="width:0px"></div>
+
+<div region="center" ></div>
+</body>
+</html>

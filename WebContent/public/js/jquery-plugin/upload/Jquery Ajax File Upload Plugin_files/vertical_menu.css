@@ -1,0 +1,48 @@
+#verticalmenu {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 45px 0px 0px 10px; PADDING-LEFT: 0px; WIDTH: 200px; PADDING-RIGHT: 0px; COLOR: #001c4d; FONT-SIZE: 11px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.glossymenu {
+	LIST-STYLE-TYPE: none
+}
+.glossymenu LI UL {
+	LIST-STYLE-TYPE: none
+}
+.glossymenu LI UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.glossymenu LI {
+	POSITION: relative
+}
+.glossymenu LI A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 30px; WIDTH: auto; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(../images/menu12.gif) no-repeat; HEIGHT: 22px; TEXT-DECORATION: none; PADDING-TOP: 10px
+}
+.glossymenu LI UL {
+	POSITION: absolute; WIDTH: 190px; DISPLAY: none; TOP: 0px; LEFT: 0px
+}
+.glossymenu LI UL LI {
+	FLOAT: left
+}
+.glossymenu LI UL A {
+	WIDTH: 200px; HEIGHT: 22px
+}
+.glossymenu .arrowdiv {
+	POSITION: absolute; BACKGROUND: url(../images/arrow.gif) no-repeat right center; RIGHT: 2px
+}
+.glossymenu LI A:visited {
+	COLOR: #666
+}
+.glossymenu LI A:active {
+	COLOR: #666
+}
+.glossymenu LI A:hover {
+	BACKGROUND: url(../images/menu12.gif) no-repeat 0px -32px
+}
+#verticalmenu A.active {
+	COLOR: #ff0033
+}
+* HTML .glossymenu LI {
+	FLOAT: left; HEIGHT: 1%
+}
+* HTML .glossymenu LI A {
+	HEIGHT: 1%
+}

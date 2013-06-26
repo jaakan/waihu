@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- 禁止缓存 -->
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+<title>欢迎登陆</title>
+<link rel="stylesheet" type="text/css" href="../public/css/main.css"  />
+<link rel="stylesheet" type="text/css" href="../public/css/login.css" />
+<script type="text/javascript" src="../public/js/jquery/jquery1-7-2.js" ></script>
+<script type="text/javascript" src="../public/js/tools.js" ></script>
+<script type="text/javascript">
+$(document).ready(init);
+
+var _username;
+var _name;
+var _password;
+
+function init(){
+	$("#button input").click(onSubmit);
+}
+
+function onSubmit(){
+	_username=$("#username input").val();
+	_password=$("#password input").val();
+	println("CLICK");
+	println(_username);
+	println(_password);
+	
+	$.post("login.jsp",{"username":_username,"password":_password},function(data,status){
+		subData(data,status);
+		});
+	
+	
+}
+
+function subData(data,status){
+	if(status=="success"){
+		//$("#msg").text("连接服务器成功！");
+		var res=eval("("+data+")");
+		if(res.user=="null"){
+			$("#msg").html("用户名或密码错误！");
+		}else if(res.user!="null"){
+			$("#msg").html("欢迎"+res.user.name+"登陆，两秒钟后跳转至查看页面，若您的浏览器不支持跳转，请点击<a href='index.html'>此处</a>");
+			setTimeout("javascript:location.href='index.html'", 2000);
+		}
+		
+	}else{
+		$("#msg").text("连接服务器失败！");
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="data"></div>
+<div id="print"></div>
+
+<div id="main">
+<div id="header">
+<ul id="login">
+
+</ul>
+<div id="banner"></div>
+<div id="links">
+
+</div>
+</div>
+
+<div id="contain">
+<div id="containleft" class="left">
+</div>
+<div id="containright">
+<div id="loginform">
+<form action="#" method="post" onsubmit="return false">
+<div id="username">输入账号:<input type="text" name="username"/></div><br />
+<div id="password">输入密码：<input type="password" name="password"/></div><br />
+<div id="button"><input name="button" type="button" value="提交"style="width:100px;height:30px;"  /></div>
+</form>
+<div id="msg"></div>
+</div>
+
+</div>
+</div>
+
+<div id="footer">
+
+</div>
+</div>
+</body>
+</html>

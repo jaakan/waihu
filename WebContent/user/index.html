@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- 禁止缓存 -->
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<title>张家港移动外呼系统</title>
+<!--载入easyui css-->
+<link rel="stylesheet" type="text/css" href="../public/js/jquery-plugin/jquery-easyui-1.2.3/themes/gray/easyui.css"  />
+<style type="text/css">
+#menu .links{
+
+background:#FFFFFF;
+font-size:16px;
+font-family:"楷体_GB2312";
+text-align: center;
+margin-top:1px;
+}
+#menu .links:hover{
+background:#CCCCCC;
+}
+
+#head{
+font-size:15px;
+font-family:"黑体";
+}
+
+</style>
+<!--载入jQuery && jquery-easyui js -->
+
+<script type="text/javascript" 
+src="../public/js/jquery/jquery1-7-2.js"></script>
+<script type="text/javascript" 
+src="../public/js/jquery-plugin/jquery-json/jquery.json.js"></script>
+<script type="text/javascript" 
+src="../public/js/jquery-plugin/jquery-easyui-1.2.3/jquery.easyui.min.js"></script>
+<script type="text/javascript" 
+  src="../public/js/jquery-plugin/jquery-easyui-1.2.3/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript">
+
+var task=new Object();
+var user=new Object();
+var currentTaskName;
+
+$(document).ready(init);
+
+
+function init(){
+$("body").layout();
+$.post("index.jsp",{"req":"getUserData"},function(data,status){
+	onLogin(data,status);
+});
+} //init end;
+
+function onLogin(data,status){
+	res=eval("("+data+")");
+	if(res.login=="success"){
+		user=res.user;
+		//alert($.toJSONString(user["name"]));
+		$("#head").append("<br><br>姓名:"+user.name+"<br>");
+		$("#head").append("所属营销中心:第"+user.subcenter+"分中心<br>");
+		initMenu();
+	}else{
+		alert("登陆失败,请返回登陆！");
+		window.location.href="login.html";
+	}
+	
+}
+
+//设置Menu；
+function initMenu(){
+	//  0.
+	var makeTask=new Object();
+	makeTask={
+		id:"makeTask",
+		text:"发布任务",
+		state:"open",
+	    children:[]
+	};
+	//  1.
+	var makedTask=new Object();
+	makedTask={
+		id:"makedTask",
+		text:"已发布的任务",
+		state:"closed",
+		children:[]
+	};
+	//  2.
+	var supervise=new Object();
+	supervise={
+			id:"supervise",
+			text:"督导任务",
+			state:"closed",
+			children:[]
+			
+	}
+	
+	
+	var _menu=new Array();
+	_menu.push(makeTask);
+	_menu.push(makedTask);
+	_menu.push(supervise);
+	
+	loadMenuData("menu.jsp",_menu);
+	
+}
+function loadMenuData(url,menu){
+    $.post(url,function(data,status){
+    	var resData=eval("("+data+")");
+    	for(var i=0;i<resData.length;i++){
+    		menu[i].children=resData[i];
+    	}
+    	
+		$("#menu").tree({
+			data:menu,
+			onClick:function(node){
+				var parentName=$("#menu").tree("getParent",node.target).text;
+				if(parentName=="发布任务"){
+					if(node.id=="addTask"){
+						$("div[region='center']").load("newTask.html");
+					}
+				}else if(parentName=="已发布的任务"){
+					alert(node.text);
+					$("#manage").show();
+					$("div[region='center']").html($("#manage"));
+					currentTaskName=node.text;
+					manageTaskInit(node.text);
+				}else if(parentName=="督导任务"){
+					$("#supervise").show();
+					var $supervise=$("div[region='center']").html($("#supervise"));
+					currentTaskName=node.text;
+					superviseTask(node.text);
+				}
+				
+			}
+		});
+	});
+}
+
+
+//初始管理任务;
+function manageTaskInit(taskName){
+	$("#manage th[tag='name']").text(taskName);
+	$("#manage td[tag='delete'] input").click(deleteTask);
+	$("#manage td[tag='update'] input").click(function(){
+		updateTask(taskName);
+	});
+	
+}
+
+//删除任务;
+function deleteTask(taskName){
+	if(confirm("确定删除"+currentTaskName+"?")){
+		$.post("manageTask.jsp",{"req":"deleteTask","taskName":currentTaskName},function(data,status){
+			var res=eval("("+data+")");
+			//alert(res.isDelete);
+			if(res.isDelete=="yes"){
+				alert("删除成功！");
+				initMenu();
+			}else{
+				alert("删除失败！");
+			}
+		});
+	}else{
+		return false;
+	}
+	
+}
+
+//督导任务;
+function superviseTask(taskName){
+	var $tr=$("<tr><td></td><td></td><td></td></tr>");
+	var $taskName=$($("td",$tr)[0]);
+	var $userName=$($("td",$tr)[1]);
+	var $action=$($("td",$tr)[2]);
+	
+	$taskName.html(taskName);
+	$userName.html(user.name);
+	$action.html("<input type='button' value='查看'>");
+	
+	$("#supervise tbody").html($tr);
+	$("input",$action).click(function(){
+		//alert(taskName);
+		lookupTask(taskName);
+	});
+	
+}
+//查看任务;
+function lookupTask(taskName){
+	window.open("lookupTask.jsp");
+}
+
+
+function updateTask(taskName){
+	alert("更新"+taskName);
+	$.post("index.jsp",{"req":"updateTask","taskName":taskName},function(data,status){
+		var res=eval("("+data+")");
+		if(res.doUpdate=="success"){
+			window.open("updateTask.html");
+		}
+	});
+}
+
+</script>
+
+</head>
+
+<body>  
+
+     <div region="north" style="height:100px;">
+     <div id="head"></div>
+     </div>  
+
+     <div region="south" style="height:100px;"></div>  
+
+     <div region="east" title="East" style="width:0px;"></div>  
+
+     <div region="west"  split="true" title="West" style="width:150px;">
+	 
+	 <div id="menu">
+	  <!-- <div title="添加新任务" selected="true" >
+	       <div class="links" title="newTask">添       加</div> 
+     </div>
+	 -->
+	 </div><!--menu end-->
+	 </div> <!--west end-->
+	 
+     <div region="center" title="center title" style="padding:0px;background:#eee;">
+    
+     </div>  
+
+
+<div id="manage" style="display:none;margin-left:150px;text-align:center;">
+<table>
+<thead>
+<tr><th>文件名：</th><th tag="name"></th></tr>
+</thead>
+
+<tbody>
+<tr><td>操作</td><td tag="update"><input type='button' value='更新'></input></td></tr>
+<tr><TD>操作</TD><td tag="delete"><input type='button' value='删除'></input></td></tr>
+</tbody>
+
+</table>
+</div> <!-- manage end -->
+
+
+<div id="supervise" style="display:none;margin-left:150px;text-align:center;">
+<table>
+<thead><tr><th>任务名称</th><th>发布人</th><th>操作</th></tr></thead>
+<tbody></tbody>
+</table>
+</div>  <!-- supervise end -->
+
+</body>  
+
+
+</html>

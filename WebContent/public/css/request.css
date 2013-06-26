@@ -1,0 +1,24 @@
+/* CSS Document */
+
+#loginform{
+background-color:#99FF00;
+margin:50px auto;
+width:500px;
+height:150px;
+padding-top:20px;
+padding-left:20px;
+
+filter:dropshadow(OffX=2, OffY=2, Color='black', Positive='true');
+-webkit-box-shadow:2px 2px 2px black;
+-moz-box-shadow:2px 2px 2px black;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+}
+
+
+#button{
+float:right;
+font-size:18px;
+margin-right:10px;
+}

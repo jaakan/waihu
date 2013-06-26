@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META HTTP-EQUIV="pragma" CONTENT="no-cache" /> 
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate" /> 
+<title>张家港移动外呼系统</title>
+<!--载入easyui css-->
+
+<!--载入jQuery && jquery-easyui js -->
+
+<script type="text/javascript" 
+src="../public/js/jquery/jquery1-7-2.js"></script>
+<script type="text/javascript" 
+src="../public/js/jquery-plugin/jquery-json/jquery.json.js"></script>
+<script type="text/javascript" 
+src="../public/js/jquery-plugin/jquery-easyui-1.2.3/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+var menu=new Array();
+var makeTask=new Object();
+makeTask={
+	id:"makeTask",
+	text:"发布任务",
+	state:"open",
+    children:[
+{id:"a1",text:"发布新任务"}
+                ]
+};
+
+var makedTask=new Object();
+makedTask={
+	id:"makedTask",
+	text:"已发布的任务",
+	state:"closed",
+	children:[
+{id:"a1",text:"已发布的任务"}
+		        ]
+};
+
+var _menu=new Array();
+_menu.push(makeTask);
+_menu.push(makedTask);
+
+menu=eval("("+$.toJSONString(_menu)+")");
+alert(menu[1].id);
+</script>
+
+</head>
+
+<body>  
+
+ 
+
+
+</body>  
+
+
+</html>

@@ -1,0 +1,43 @@
+/* CSS Document */
+
+#loginform{
+
+margin:50px auto;
+width:500px;
+height:200px;
+padding-top:20px;
+padding-left:20px;
+
+-webkit-box-shadow:2px 2px 2px black;
+-moz-box-shadow:2px 2px 2px black;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+}
+
+
+#button{
+float:right;
+font-size:18px;
+margin-right:10px;
+}
+
+#links ul li{
+height:30px;
+margin:5px auto;
+margin-right:1px;
+
+width:120px;
+font-size:26px;
+border-radius:4px;
+}
+
+#links ul li:link {background-color:#FF0000;}
+#links ul li:visited {background-color:#00FF00;
+color:#FF0000;
+
+}
+#links ul li:hover {background-color: #c7e000;}
+#links ul li:active {background-color: #0000FF;
+color:#00FF00;
+}

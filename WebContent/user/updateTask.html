@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>更新数据</title>
+
+<style type="text/css" >
+*{
+margin: 0px auto;
+}
+
+#choose{
+text-align: left;
+width: 750px;
+}
+#choose div[tag='tree']{
+text-align: left;
+}
+#modle table{
+border-collapse:collapse;
+}
+#modle table tr th{
+margin:0px;
+padding:0px;
+border:1px solid #000000;    /* 单元格边框 */
+}
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="../public/js/jquery-plugin/jquery-easyui-1.2.3/themes/gray/easyui.css"  />
+
+<!--载入jQuery && jquery-easyui js -->
+
+<script type="text/javascript" 
+src="../public/js/jquery/jquery1-7-2.js"></script>
+<script type="text/javascript" 
+src="../public/js/jquery-plugin/jquery-json/jquery.json.js"></script>
+<script type="text/javascript" 
+src="../public/js/jquery-plugin/jquery-easyui-1.2.3/jquery.easyui.min.js"></script>
+<script type="text/javascript" 
+src="../public/js/jquery-plugin/upload/ajaxfileupload.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(init);
+
+function init(){
+	var chooseMenu=new Array();
+	var node0=new Object();
+	var key;
+	node0={
+			text:"选择需要更新的内容：",
+			state:"open",
+			children:[]
+	}
+	chooseMenu.push(node0);
+	$.post("updateTask.jsp",{"req":"init"},function(data,status){
+		var res=eval("("+data+")");
+		key=res.children.shift().text;
+		chooseMenu[0].children=res.children;
+		$("#choose div[tag='tree']").tree({
+			checkbox:true,
+			data:chooseMenu
+		});
+	});
+	$("#choose input[name='choose']").click(function(){
+		$("#modle").show();
+		$("#modle").window({width:450,height:350});
+		var nodes=$("#choose div[tag='tree']").tree("getChecked");
+		var $tr=$("#modle table thead tr");
+		$tr.html("");
+		$tr.append("<th>"+key+"</th>");
+		for(var i=0;i<nodes.length;i++){
+			//alert(nodes[i].text);
+			$tr.append("<th>"+nodes[i].text+"</th>");
+		}
+		
+		$("#modle input[name='next']").unbind("click");
+		$("#modle input[name='next']").click(function(){
+			var metaData=new Array();
+			var arr=$("#modle table th");
+			for(var i=0;i<arr.length;i++){
+				var obj={name:$(arr[i]).text()};
+				metaData.push(obj);
+			}
+			//alert($.toJSONString(metaData));
+			doUpload(metaData);
+		});
+	});
+		
+}
+
+
+function doUpload(metaData) {
+	$("#modle").window("close");
+	$("#upload").show();
+	$("#upload").window({width:450,height:350});
+	$("#upload input[name='submit']").unbind("click");
+	$("#upload input[name='submit']").click(function(){
+		alert("上传文件");
+		ajaxFileUpload(onComplete,metaData);
+	});
+	
+}
+
+function ajaxFileUpload(onComplete,metaData){
+
+	$.ajaxFileUpload(
+		{
+			url:'upload.jsp',
+			secureuri:false,
+			fileElementId:'uploadFile',
+			beforeSend:function()
+			{
+				//.....
+			},
+			complete:function()
+			{
+				//...
+				onComplete(metaData);
+				
+			},				
+			success: function (data, status)
+			{
+				
+			},
+			error: function (data, status, e)
+			{
+				
+			}
+		});
+	
+	return false;
+
+}
+
+function onComplete(metaData){
+	alert("上传成功！");
+	$.post("updateTask.jsp",{"req":"uploaded","metaData":$.toJSONString(metaData)},function(data,status){
+		var res=eval("("+data+")");
+		//alert(data);
+		//alert("match:"+res.match);
+		if(res.match=="yes"){
+			if(res.status=="success"){
+				alert("更新数据成功！");
+			}else{
+				alert("发生未知错误，请稍后重试！");
+			}
+		}else{
+			alert("上传的表格有错误，请修改表格后重试！");
+		}
+		$("#upload").window("close");
+	});
+}
+
+</script>
+
+
+</head>
+<body>
+<div id="choose">
+<div tag="tree"></div>
+<input type="button" name="choose" value="确定"></input>
+</div>
+
+<div id="modle" style="display:none;text-align:center;padding-top:50px">
+请上传Excel表格时，表格的第一行严格按照下面的表格填写：<br><br><br>
+<table><thead><tr></tr></thead></table> <br><br><br><br>
+<input type="button" name="next" value="下一步"></input>
+ </div>
+ <div id="upload" style="display:none;text-align:center;padding-top:50px">
+<input type="file" name="uploadFile" id="uploadFile"></input> <input type="button" name="submit" value="上传"></input>
+ </div>
+</body>
+</html>

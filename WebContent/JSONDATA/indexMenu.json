@@ -1,0 +1,16 @@
+[
+{       "id":"makeTask",
+	"text":"发布任务",
+	"state":"open",
+    "children":[
+        {"id":"a1","text":"发布新任务"}
+                ]
+},
+{       "id":"makedTask",
+	"text":"已发布的任务",
+	"state":"closed",
+    "children":[
+         {"id":"a1","text":"发布新任务"}
+                ]
+}
+]
